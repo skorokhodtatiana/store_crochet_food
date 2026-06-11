@@ -29,7 +29,16 @@ export default function Header() {
 					key={item.href}
 					className={`px-2 ${isActive ? "text-blue-800" : "text-foreground"}`}
 					href={item.href}>
-					{item.label}
+					<div
+						className="hidden md:block">
+						{item.label}
+					</div>
+					<Image
+						src={item.src ?? "/empty-photo.png"}
+						alt={item.href}
+						width={26} height={26}
+						className="block md:hidden"
+					/>
 				</Link>
 			})
 		);
@@ -37,22 +46,28 @@ export default function Header() {
 
 	return (
 		<header>
-			<nav className="flex justify-between p-4">
+			<nav aria-label="Пользовательское меню" className="flex justify-between p-4 bg-green-300">
 				<Link href="/" className="flex gap-1 justify-center items-center">
 					<Logo/>
 					<h1 className="font-bold text-inherit">{siteConfig.title}</h1>
 				</Link>
 				<div>
-					{getNavItems()}
-				</div>
-				<div>
-					<Button variant="ghost">
+					<Button variant="ghost" className="hidden md:block">
 						Регистрация
 					</Button>
 					<Button variant="ghost">
-						Логин
+						<span className="hidden md:block">Войти</span>
+						<Image
+							src="/login.png"
+							alt="login"
+							width={26} height={26}
+							className="block md:hidden"
+						/>
 					</Button>
 				</div>
+			</nav>
+			<nav aria-label="Основная навигация" className="flex justify-between p-4">
+					{getNavItems()}
 			</nav>
 		</header>
 	);
