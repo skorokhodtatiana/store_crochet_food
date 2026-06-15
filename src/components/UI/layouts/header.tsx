@@ -30,15 +30,16 @@ export default function Header() {
 					className={`px-2 ${isActive ? "text-blue-800" : "text-foreground"}`}
 					href={item.href}>
 					<div
-						className="hidden md:block">
+						// className="hidden md:block"
+						>
 						{item.label}
 					</div>
-					<Image
+					{/* <Image
 						src={item.src ?? "/empty-photo.png"}
 						alt={item.href}
 						width={26} height={26}
 						className="block md:hidden"
-					/>
+					/> */}
 				</Link>
 			})
 		);
@@ -51,7 +52,17 @@ export default function Header() {
 					<Logo/>
 					<h1 className="font-bold text-inherit">{siteConfig.title}</h1>
 				</Link>
-				<div>
+				<div className="flex items-center">
+					<Link className="px-2" href="/basket">
+						<Image
+							src="/cart.svg"
+							alt="Корзина"
+							width={26} height={26}
+							priority
+							className="rounded-full"
+						/>
+						<span className="hidden md:block">Корзина</span>
+					</Link>
 					<Button variant="ghost" className="hidden md:block">
 						Регистрация
 					</Button>

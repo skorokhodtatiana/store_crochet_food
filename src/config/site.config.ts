@@ -4,6 +4,5 @@ export const siteConfig = {
 		{href: "/", label: "Главная"},
 		{href: "/about", label: "Обо мне"},
 		{href: "/catalog", label: "Каталог"},
-		{href: "/basket", label: "Корзина", src: "/cart.svg"},
 	]
 }
