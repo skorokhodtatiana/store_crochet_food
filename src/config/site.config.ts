@@ -1,8 +1,10 @@
 export const siteConfig = {
-	title: "Natashina pekarnya",
+	title: "TS",
 	navItems: [
 		{href: "/", label: "Главная"},
 		{href: "/about", label: "Обо мне"},
-		{href: "/catalog", label: "Каталог"},
+		{href: "/project", label: "Проекты"},
+		{href: "/experience", label: "Опыт"},
+		{href: "/contacts", label: "Контакты"},
 	]
 }
