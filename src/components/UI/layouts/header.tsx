@@ -28,10 +28,11 @@ export default function Header() {
 				const isActive = pathname === item.href;
 				return <Link
 					key={item.href}
-					className={`px-2 ${isActive ? "text-blue-800" : "text-foreground"}`}
+					className={`px-2 ${isActive ? "text-blue-800 rounded-full bg-amber-100" : "text-foreground"}`}
 					href={item.href}>
 					<div
 						// className="hidden md:block"
+						className="p-2"
 						>
 						{item.label}
 					</div>
@@ -48,7 +49,7 @@ export default function Header() {
 
 	return (
 		<header>
-			<nav aria-label="Основная навигация" className="flex justify-between p-4 dark:bg-gray-800">
+			<nav aria-label="Основная навигация" className="flex justify-between items-center p-4 dark:bg-gray-900/80">
 				<Link href="/" className="flex gap-1 justify-center items-center">
 					{/* <Logo/> */}
 					<h1 className="font-bold text-inherit">{siteConfig.title}</h1>
