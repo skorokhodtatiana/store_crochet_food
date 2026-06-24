@@ -28,7 +28,7 @@ export default function Header() {
 				const isActive = pathname === item.href;
 				return <Link
 					key={item.href}
-					className={`px-2 ${isActive ? "text-focus rounded-full bg-accent " : "text-foreground"}`}
+					className={`px-2 ${isActive ? "text-focus rounded-full bg-accent" : "text-foreground"}`}
 					href={item.href}>
 					<div
 						// className="hidden md:block"
@@ -48,11 +48,10 @@ export default function Header() {
 	};
 
 	return (
-		<header>
+		<header className="mb-8">
 			<nav aria-label="Основная навигация" className="flex justify-between items-center p-4">
 				<Link href="/" className="flex gap-1 justify-center items-center">
-					{/* <Logo/> */}
-					<h1 className="font-bold text-inherit">{siteConfig.title}</h1>
+					<h1 className="font-bold text-2xl">{siteConfig.title}</h1>
 				</Link>
 				<div className="flex justify-between p-4">
 					{getNavItems()}
