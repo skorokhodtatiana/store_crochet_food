@@ -5,7 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/src/config/site.config";
 import { usePathname } from "next/navigation";
-import { ThemeToggle } from "./themeToggle";
+import { ThemeToggle } from "../../common/themeToggle";
+import LanguageToggle from "../../common/languageToggle";
 
 // export const Logo = () => {
 // 	return (
@@ -58,6 +59,7 @@ export default function Header() {
 				</div>
 				<div>
 					<ThemeToggle/>
+					<LanguageToggle/>
 				</div>
 			</nav>
 		</header>
