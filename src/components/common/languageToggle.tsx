@@ -37,7 +37,7 @@ export default function LanguageSwitcher() {
 	};
 
 	return (
-		<button onClick={toggleLanguage} className="p-2 with-[45px] ml-2 rounded-full border-2 border-accent transition-colors cursor-pointer">
+		<button onClick={toggleLanguage} className="p-2 w-11 ml-2 rounded-full border-2 border-accent transition-colors cursor-pointer">
 			{t('switch_lang')}
 		</button>
 	);
