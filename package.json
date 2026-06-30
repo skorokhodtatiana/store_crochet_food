@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "i18n:parse": "i18next-parser"
+    "i18n:extract": "i18next-cli extract",
+    "i18n:status": "i18next-cli status"
   },
   "dependencies": {
     "@heroui/react": "^3.1.0",
@@ -27,7 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
-    "i18next-parser": "^9.0.2",
+    "i18next-cli": "^1.64.2",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
