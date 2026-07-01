@@ -1,3 +1,12 @@
+// siteConfig.js
+
+// Подсказки для сканера i18next:
+// t('Главная')
+// t('Обо мне')
+// t('Проекты')
+// t('Опыт')
+// t('Контакты')
+
 export const siteConfig = {
 	title: "TS",
 	navItems: [

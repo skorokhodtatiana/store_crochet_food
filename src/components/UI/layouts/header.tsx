@@ -7,6 +7,7 @@ import { siteConfig } from "@/src/config/site.config";
 import { usePathname } from "next/navigation";
 import { ThemeToggle } from "../../common/themeToggle";
 import LanguageToggle from "../../common/languageToggle";
+import { useTranslation } from 'react-i18next';
 
 // export const Logo = () => {
 // 	return (
@@ -22,6 +23,7 @@ import LanguageToggle from "../../common/languageToggle";
 
 export default function Header() {
 	const pathname = usePathname();
+	const { t } = useTranslation();
 
 		const getNavItems = () => {
 		return (
@@ -35,7 +37,7 @@ export default function Header() {
 						// className="hidden md:block"
 						className="p-2"
 						>
-						{item.label}
+						{t(item.label)}
 					</div>
 					{/* <Image
 						src={item.src ?? "/empty-photo.png"}
